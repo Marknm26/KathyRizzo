@@ -1,0 +1,160 @@
+:root {
+    --primary-gradient-start: #6a11cb;
+    --primary-gradient-end: #2575fc;
+    --accent-color: #ffcc00;
+    --text-color: white;
+    --background-color: #f4f4f4;
+    --link-hover-color: rgba(255, 255, 255, 0.8);
+    --nav-background: #333;
+    --nav-link-color: white;
+    --nav-link-hover-bg: #555;
+    --footer-gradient-start: #6a11cb;
+    --footer-gradient-end: #2575fc;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.Beyond {
+    color: var(--accent-color);
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: var(--nav-background);
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--nav-link-hover-bg);
+    color: black;
+}
+
+main {
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.image-container, .Biography {
+    flex: 1;
+    max-width: 600px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Biography {
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: linear-gradient(to right, var(--footer-gradient-start), var(--footer-gradient-end));
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row-reverse; /* This reverses the default order so the text is on the left */
+    align-items: center; /* Aligns the text and image vertically at the center */
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-text h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-gradient-start);
+    margin-bottom: 10px;
+}
+
+.skill-text ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.skill-text li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 50%; /* Sets a default width to the image */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .skill-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 80%; /* Larger width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
